@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import CatCreate from "./CatCreate";
 import CatDetails from "./CatDetails";
 import CatEdit from "./CatEdit";

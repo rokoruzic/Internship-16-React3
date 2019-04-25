@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, BrowserRouter, Switch, Redirect, Link } from "react-router-dom";
+import { Route, BrowserRouter, Switch, Redirect} from "react-router-dom";
 import Cats from "./components/Cats";
 import Dogs from "./components/Dogs";
 import Menu from "./components/Menu";

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { FetchCat } from "../utils";
 import CatsForm from "./CatsForm";
-class CatEdit extends Component {
+class CatCreate extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -48,4 +47,4 @@ class CatEdit extends Component {
     );
   }
 }
-export default CatEdit;
+export default CatCreate;

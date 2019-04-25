@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { FetchDog } from "./../../../utils";
+import { Link } from "react-router-dom";
 
 class DogDetails extends Component {
   constructor(props) {
@@ -7,13 +7,24 @@ class DogDetails extends Component {
     this.state = { dog: null };
   }
   componentDidMount() {
-    const { id } = 1;
-    FetchDog(id).then(data => {
-      this.setState({
-        dog: data
+    const { id } = this.props.match.params;
+    fetch(` http://localhost:3000/dogs/${id}`)
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          dog: data
+        });
       });
-    });
   }
+  handleDelete = () => {
+    const { id } = this.props.match.params;
+    const { history } = this.props;
+
+    fetch(` http://localhost:3000/dogs/${id}`, {
+      method: "DELETE"
+    }).then(response => response.json());
+    history.push("/dogs");
+  };
   render() {
     const { dog } = this.state;
     if (!dog) return null;
@@ -21,6 +32,11 @@ class DogDetails extends Component {
       <div>
         <h1>{dog.name}</h1>
         <div>{dog.description}</div>
+        <Link to={`/dog/edit/${dog.id}`}>
+          {" "}
+          <button>Edit dog</button>
+        </Link>
+        <button onClick={this.handleDelete}>Delete dog</button>
       </div>
     );
   }
