@@ -1,0 +1,42 @@
+{
+  "cats": [
+    {
+      "id": 113
+    },
+    {
+      "id": 114
+    },
+    {
+      "id": 115
+    },
+    {
+      "id": 116
+    },
+    {
+      "id": 117
+    },
+    {
+      "id": 118
+    },
+    {
+      "id": 119
+    },
+    {
+      "name": "asd1231",
+      "description": "asd",
+      "id": 120
+    },
+    {
+      "name": "fdsfsd",
+      "description": "sdfsdf",
+      "id": 121
+    }
+  ],
+  "dogs": [
+    {
+      "id": 1,
+      "name": "Ghost",
+      "description": "White werewolf with red eyes"
+    }
+  ]
+}
