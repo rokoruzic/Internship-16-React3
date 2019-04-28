@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch} from "react-router-dom";
 import DogCreate from "./DogCreate";
 import DogDetails from "./DogDetails";
 import DogEdit from "./DogEdit";
@@ -26,6 +26,7 @@ class Dogs extends Component {
             path="/dogs/:id"
             render={props => <DogDetails {...props} />}
           />
+
         </Switch>
       </div>
     );

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DogsForm from "./dogsForm";
+import DogsForm from "./DogsForm";
 class DogEdit extends Component {
   constructor(props) {
     super(props);
@@ -36,7 +36,7 @@ class DogEdit extends Component {
       method: "PUT",
       body: JSON.stringify(dog),
       headers: {
-        "Content-Type": "applidogion/json"
+        "Content-Type": "application/json"
       }
     })
       .then(response => response.json())

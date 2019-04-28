@@ -32,7 +32,7 @@ class DogDetails extends Component {
       <div>
         <h1>{dog.name}</h1>
         <div>{dog.description}</div>
-        <Link to={`/dog/edit/${dog.id}`}>
+        <Link to={`/dogs/edit/${dog.id}`}>
           {" "}
           <button>Edit dog</button>
         </Link>

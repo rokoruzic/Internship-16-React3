@@ -10,12 +10,12 @@ class DogCreate extends Component {
 
   handleChangeName = event => {
     this.setState({
-      dog: { name: event.target.value, description: this.state.cat.description }
+      dog: { name: event.target.value, description: this.state.dog.description }
     });
   };
   handleChangeDescription = event => {
     this.setState({
-      dog: { name: this.state.cat.name, description: event.target.value }
+      dog: { name: this.state.dog.name, description: event.target.value }
     });
   };
   handleSubmit = () => {
@@ -30,7 +30,7 @@ class DogCreate extends Component {
     })
       .then(response => response.json())
       .then(resp => {
-        history.push(`/cats/${resp.id}`);
+        history.push(`/dogs/${resp.id}`);
       });
   };
   render() {
